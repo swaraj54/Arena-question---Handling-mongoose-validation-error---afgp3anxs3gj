@@ -10,7 +10,7 @@ mongoose.set('useFindAndModify', false);
 
 const url = 'mongodb://0.0.0.0:27017/users';
 mongoose.connect(
-  url,
+  process.env.DATABASE_URL,
   { useNewUrlParser: true, useUnifiedTopology: true },
   () => {
     console.log('connected to DB');
